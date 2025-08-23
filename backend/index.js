@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Supabase
-const supabaseUrl = "https://fzjetorppylnsrfqkzht.supabase.co";
+const supabaseUrl = "process.env.SUPABASE_URL";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6amV0b3JwcHlsbnNyZnFremh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3NDUyMTIsImV4cCI6MjA3MTMyMTIxMn0.bRdcv19s3uUbW-CdrBabnpvfqzuBeMbctwufWueL8N0"; // ⚠️ Use SERVICE_ROLE_KEY no backend
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -97,6 +97,7 @@ app.get("/usuarios", validarJWT, async (req, res) => {
   }
   res.json(data);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
