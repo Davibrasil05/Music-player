@@ -8,11 +8,11 @@ import { createClient } from '@supabase/supabase-js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT 
+const PORT = 3000;
 
 // Supabase
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY; // ⚠️ Use SERVICE_ROLE_KEY no backend
+const supabaseUrl = "https://fzjetorppylnsrfqkzht.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6amV0b3JwcHlsbnNyZnFremh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3NDUyMTIsImV4cCI6MjA3MTMyMTIxMn0.bRdcv19s3uUbW-CdrBabnpvfqzuBeMbctwufWueL8N0"; // ⚠️ Use SERVICE_ROLE_KEY no backend
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // JWT secret
@@ -97,6 +97,14 @@ app.get("/usuarios", validarJWT, async (req, res) => {
   }
   res.json(data);
 });
+
+app.get("/musicas",async(req,res)=>{
+  const {data,error} = await  supabase.from('songs').select('*');
+   if(error){
+    return res.status(500).json({error: 'erro ao exibir a lista de musica'})
+   }
+   res.json(data)
+})
 
 
 app.listen(PORT, () => {
