@@ -1,0 +1,91 @@
+RoadMap MiniSpotify
+
+🔹 Fase 1 – Preparação (Dia 0–2)
+👉 Objetivo: ter o ambiente pronto para começar sem dor de cabeça.
+Configuração do Git/GitHub
+Criar repositório no GitHub (branch ).
+Clonar no PC de cada integrante.
+Definir padrão de commits (, , ).
+Setup inicial do frontend (React + Vite + Tailwind)
+Criar app React com Vite.
+Instalar e configurar TailwindCSS (aprender o básico: , , , , , ).
+Testar um “Hello World” estilizado.
+Setup inicial do backend
+Criar API com Node.js + Express (ou Fastify).
+Criar rota  só para testar.
+Conectar banco (PostgreSQL via Supabase ou MongoDB Atlas).
+✅ Saída esperada:
+Frontend rodando () + Backend rodando () + GitHub sincronizado.
+🔹 Fase 2 – MVP Básico (Semana 1–2)
+👉 Objetivo: ter um player simples que toca músicas locais.
+Frontend MVP
+Criar páginas: Login, Home, Player.
+Fazer Navbar simples com Tailwind.
+Criar componente de Player (HTML ) com botões .
+Backend MVP
+Criar modelo  no banco.
+Endpoint  que retorna lista de músicas.
+Endpoint  para registrar quando usuário ouve música.
+Integração
+Frontend chama  e mostra lista.
+Ao clicar em uma música, player toca ().
+✅ Saída esperada:
+Um app onde você loga → vê músicas → clica → toca.
+(simples, mas já mostra valor no currículo).
+🔹 Fase 3 – Usuários e Autenticação (Semana 2–3)
+👉 Objetivo: dar personalização mínima.
+Backend
+Criar modelo .
+Rotas  e  com JWT.
+Middleware de autenticação para rotas protegidas.
+Frontend
+Formulário de login/register (com Tailwind).
+Guardar token no .
+Proteger páginas que exigem login.
+✅ Saída esperada:
+Cada usuário só vê suas playlists/histórico.
+🔹 Fase 4 – Playlists e Histórico (Semana 3–4)
+👉 Objetivo: deixar app mais próximo de um player real.
+Backend
+Modelo : {id, userId, name, songs[]}.
+Endpoints:
+ → cria playlist
+ → adiciona música
+Frontend
+Página “Minhas Playlists”.
+Criar playlist + adicionar música.
+Página “Histórico” consumindo .
+✅ Saída esperada:
+Usuário pode criar playlists e ver histórico.
+🔹 Fase 5 – Recomendação (Semana 4–5)
+👉 Objetivo: adicionar a IA simples.
+
+Backend (Python ou Node)
+Analisar histórico e sugerir músicas por gênero/artista.
+Endpoint /recommendations/:userId.
+Frontend
+Página “Recomendações para você”.
+
+✅ Saída esperada:
+
+Sistema mostra sugestões simples com base no que a pessoa ouviu.
+
+---
+
+🔹 Fase 6 – Refinamento (Semana 6+)
+👉 Objetivo: transformar o MVP em projeto de portfólio real.
+
+Deploy do frontend (Vercel) e backend (Render/Railway).
+Melhorar UI com Tailwind (tema escuro, responsividade).
+CI/CD com GitHub Actions.
+Documentação com prints + vídeo demo no README.
+
+---
+
+🎯 Prioridade Absoluta para o MVP
+Rodar React + Vite + Tailwind (interface mínima).
+Rodar API Node com GET /songs.
+Player funcional com <audio>.
+Integração frontend + backend (buscar músicas e tocar).
+
+👉 Depois disso, o resto é incremento (login, playlists, IA, recomendações).
