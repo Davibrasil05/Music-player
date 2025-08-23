@@ -8,15 +8,15 @@ import { createClient } from '@supabase/supabase-js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT 
 
 // Supabase
-const supabaseUrl = "process.env.SUPABASE_URL";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6amV0b3JwcHlsbnNyZnFremh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3NDUyMTIsImV4cCI6MjA3MTMyMTIxMn0.bRdcv19s3uUbW-CdrBabnpvfqzuBeMbctwufWueL8N0"; // ⚠️ Use SERVICE_ROLE_KEY no backend
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY; // ⚠️ Use SERVICE_ROLE_KEY no backend
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // JWT secret
-const secret = process.env.JWT_SECRET || 's3nh@!SuperSegura2025#$$';
+const secret = process.env.JWT_SECRET;
 
 // Middlewares
 app.use(cors());
