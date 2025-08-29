@@ -1,20 +1,27 @@
 # Node.js
 node_modules/
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 # Ambiente
 .env
 .env.local
 .env.*.local
 
-# Build do Vite / frontend
+# Next.js
+.next/
+out/
+.vercel/
+
+# Build de frontend (Vite, CRA, etc.)
 dist/
 build/
 
-# Pastas de música temporárias
+# Uploads temporários
 music/
 uploads/
 

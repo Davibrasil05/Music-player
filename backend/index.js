@@ -111,7 +111,17 @@ app.post("/historico",async(req,res)=>{
 })
 
 app.get("/historico/user_id", async(req,res)=>{
-  
+  const {user_id} = req.query;
+  const {data,error} = await supabase
+    .from('music_history')
+    .select('id, user_id, song_id, songs(title, artist, album, url)')
+    .eq('user_id', user_id);
+
+    if(error){
+      return res.status(500).json({error: 'erro ao exibir o historico de musica'})
+     }
+     res.json(data)
+
 })
 
 
