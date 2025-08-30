@@ -12,12 +12,10 @@ pnpm-lock.yaml
 .env.local
 .env.*.local
 
-# Next.js
+# Next.js / Build
 .next/
 out/
 .vercel/
-
-# Build de frontend (Vite, CRA, etc.)
 dist/
 build/
 
