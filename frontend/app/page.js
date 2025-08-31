@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardAction, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 
 export default function Home() {
@@ -12,24 +12,27 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <Card className="w-full max-w-sm">
+      <Card>
         <CardHeader>
-          <CardTitle>Teste Shadcn/UI</CardTitle>
+          <CardTitle>Faça o seu Login</CardTitle>
+          <CardAction>Cadastre-se</CardAction>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <Label htmlFor="input">Digite algo:</Label>
-            <Input
-              id="input"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Ex: Testando..."
-            />
-          </div>
-          <Button onClick={() => alert(`Você digitou: ${text}`)}>
-            Mostrar
-          </Button>
+        <CardContent>
+          <p>Insira seu email: </p>
+          <Input type ="email" placeholder ="Email"/>
+
+          <p >Insira sua senha: </p>
+          <Input type = "password" placeholder = "Senha"/>
+          <a class="cursor-pointer">Esqueceu a senha?</a>
+
         </CardContent>
+        <CardFooter>
+          <div className="flex flex-wrap items-center gap-2 md:flex-row">
+            <Button> 
+              Continue com o Google
+            </Button>
+          </div>
+        </CardFooter>
       </Card>
     </div>
   );
