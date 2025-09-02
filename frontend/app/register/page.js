@@ -12,18 +12,12 @@ export default function Home() {
   const router = useRouter(); // <- inicializa o hook
 
   // Função para navegar para a tela de cadastro
-  const goToRegister = () => {
-    router.push("/register"); // <- rota da página de cadastro
-  };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <Card>
         <CardHeader>
-          <CardTitle>Faça o seu Login</CardTitle>
-          <CardAction onClick={goToRegister} className="cursor-pointer">
-            Cadastre-se
-          </CardAction>
+          <CardTitle>Crie a sua conta</CardTitle>
         </CardHeader>
         <CardContent>
           <p>Insira seu email: </p>
@@ -34,20 +28,28 @@ export default function Home() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <p>Insira sua senha: </p>
+          <p>Crie sua senha: </p>
           <Input 
             type="password" 
             placeholder="Senha" 
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
-
-          <a className="cursor-pointer">Esqueceu a senha?</a>
+          <p>Confirme sua senha: </p>
+          <Input 
+            type="password" 
+            placeholder="Senha" 
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+          
         </CardContent>
         <CardFooter>
           <div className="flex flex-wrap items-center gap-2 md:flex-row">
-            <Button>Continue com o Google</Button>
+            <Button>Cadastrar</Button>
           </div>
+          
+          
         </CardFooter>
       </Card>
     </div>

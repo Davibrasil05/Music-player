@@ -41,7 +41,7 @@ export async function POST(req) {
     if (insertError) {
       console.error(insertError);
       return NextResponse.json(
-        { error: "Erro ao criar usuário" },
+        { error: "Erro ao cri r usuário" },
         { status: 500 }
       );
     }
