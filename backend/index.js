@@ -19,7 +19,10 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const secret = process.env.JWT_SECRET;
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
 app.use(express.json());
 
 // Middleware de validação JWT

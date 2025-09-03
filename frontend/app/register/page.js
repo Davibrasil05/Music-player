@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 
 export default function RegisterPage() {
-    const[name, setName] = useState("");
+  const[name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmSenha, setConfirmSenha] = useState("");
@@ -26,7 +26,7 @@ export default function RegisterPage() {
     setError("");
 
     try {
-      const res = await fetch("/api/register", {
+      const res = await fetch("http://localhost:4000/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({name, email, senha }),
