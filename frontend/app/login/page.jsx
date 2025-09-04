@@ -22,7 +22,7 @@ export default function Home() {
         <CardHeader>
           <CardTitle>Faça o seu Login</CardTitle>
           <CardAction onClick={goToRegister} className="cursor-pointer">
-            Cadastre-se
+            Cadastre-se a
           </CardAction>
         </CardHeader>
         <CardContent>
