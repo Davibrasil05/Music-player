@@ -46,7 +46,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-black p-4">
       <Card>
         <CardHeader>
           <CardTitle>Crie a sua conta</CardTitle>

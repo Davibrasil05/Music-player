@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardAction, CardFooter } from "@/components/ui/card";
 
+
 export default function Home() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -17,12 +18,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-black p-4">
       <Card >
         <CardHeader>
           <CardTitle>Faça o seu Login</CardTitle>
           <CardAction onClick={goToRegister} className="cursor-pointer">
-            Cadastre-se a
+            Cadastre-se
           </CardAction>
         </CardHeader>
         <CardContent>

@@ -39,7 +39,7 @@ const items = [
     icon: Settings,
   },
   {
-    title: "Login",
+    title: "Loginn",
     url: "/login",
     icon: Settings,
   }
