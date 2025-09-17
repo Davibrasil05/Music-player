@@ -22,8 +22,16 @@ export default function Layout({ children }) {
           </div>
 
           {/* Conteúdo da página */}
-          <main className="p-4">
-             <MusicCard></MusicCard>
+          <main className="flex flex-wrap p-4 gap-4">
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+             <MusicCard/>
+
             {children}
           </main>
         </div>

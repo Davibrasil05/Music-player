@@ -1,25 +1,34 @@
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+"use client"
 
-export function MusicCard({ title, artist, imageUrl }) {
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Play } from "lucide-react"
+import Image from "next/image"
+
+export function MusicCard() {
   return (
-    <Card className="w-full max-w-[200px]">
+    <Card className = "cursor-pointer">
       <CardContent className="p-0">
-        <AspectRatio ratio={1}>
+        <div className="relative">
           <Image
-            src="https://lastfm.freetls.fastly.net/i/u/500x500/07f492a00c904cc6ccf868010be4d5a6.jpg"
-            alt={title}
-            className="rounded-t-md object-cover"
-            fill
+            src="https://lastfm.freetls.fastly.net/i/u/500x500/07f492a00c904cc6ccf868010be4d5a6.jpg" 
+            alt="Capa do Álbum"
+            width={256}
+            height={256}
+            className="object-cover w-full h-64"
           />
-        </AspectRatio>
+          <Button 
+            size="icon" 
+            className="absolute bottom-3 right-3 rounded-full bg-black-500 hover:bg-white-600"
+          >
+            <Play className="w-5 h-5 text-white" />
+          </Button>
+          
+        </div>
       </CardContent>
-      <CardFooter className="flex flex-col items-start space-y-1 p-2">
-        <div className="text-sm font-semibold truncate">Master of puppets</div>
-        <div className="text-xs text-muted-foreground truncate">Metallica</div>
-        <Button size="sm" className="mt-2">Tocar</Button>
+      <CardFooter className="flex flex-col items-start p-4">
+        <p className="font-semibold text-sm">Master of Puppets</p>
+        <p className="text-xs text-muted-foreground">Metallica</p>
       </CardFooter>
     </Card>
   )
