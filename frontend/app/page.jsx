@@ -5,6 +5,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { MusicCard } from "@/components/music-card";
 import { FooterPlayer } from "@/components/footer-player"; // seu player
+import { Input } from "@/components/ui/input";
 
 export default function Layout({ children }) {
   return (
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
           {/* Trigger opcional no topo */}
           <div className="p-4 border-b">
             <SidebarTrigger />
+            <Input placeholder ="Digite sua música"/>
           </div>
 
           {/* Conteúdo da página */}
